@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h1 class="mb-4">GitHub User Search</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" [(ngModel)]="query" name="query" class="form-control" placeholder="Enter GitHub username" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Search</button>
+    </form>
+    <app-user-list [users]="users"></app-user-list>
+  </div>
+  
+  

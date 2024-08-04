@@ -1,0 +1,16 @@
+<div class="mt-4">
+    <div *ngIf="users.length > 0" class="list-group">
+      <a *ngFor="let user of users" class="list-group-item list-group-item-action d-flex align-items-center" [href]="user.html_url" target="_blank">
+        <img [src]="user.avatar_url" class="rounded-circle mr-3" [alt]="user.login" width="50" height="50">
+        <div>
+          <h5 class="mb-1">{{ user.login }}</h5>
+          <small>{{ user.html_url }}</small>
+        </div>
+      </a>
+    </div>
+    <div *ngIf="users.length === 0">
+      <p>No users found.</p>
+    </div>
+  </div>
+  
+  
